@@ -1,0 +1,8 @@
+{
+  "name": "lets-test",
+  "version": "1.0.0",
+  "description": "configuration for running component, performance and security tests",
+  "main": "index.js",
+  "author": "Mihai Curteanu",
+  "license": "MIT"
+}
