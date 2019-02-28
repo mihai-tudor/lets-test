@@ -16,7 +16,7 @@ npm i lets-test --save-dev
 
 ### How to run wdio tests
 WebdriverIO is configured to run with [Mocha](https://mochajs.org/) and [Jest Expect](https://jestjs.io/docs/en/expect).  
-1. After installing the package, create the following folder structure for you *.spec.js test files.
+1. After installing the package, create the following folder structure for your *.spec.js test files.
     ```bash
     test/
     -- wdio/
@@ -42,7 +42,7 @@ WebdriverIO is configured to run with [Mocha](https://mochajs.org/) and [Jest Ex
     test/
     -- lighthouse/
     ```
-2. Inside test/lighthouse/ you need to create an urls.json file, this will tell lighthouse what URLs to test.  
+2. Inside test/lighthouse/ you need to create an urls.json file, this will tell lighthouse what URLs to test and what values to expect.  
     Here is an example:
     ```json
     {
@@ -116,13 +116,13 @@ WebdriverIO is configured to run with [Mocha](https://mochajs.org/) and [Jest Ex
     }
     ```
 3. Generate the ZAP report:
-    * first you need to install zap on you machine, just download the [Cross Platform Package](https://github.com/zaproxy/zaproxy/wiki/Downloads). This runs with JAVA so make you you also have JAVA installed.
+    * first you need to install zap on you machine, just download the [Cross Platform Package](https://github.com/zaproxy/zaproxy/wiki/Downloads). This runs with JAVA so make sure you also have JAVA installed.
     * to simplify the command line it's best to create an env variable in you system that points to the ZAP installation folder something like: $ZAP_PATH
-    * now go you your project root and run ZAP like this: (replace -quickurl with your application homepage)
+    * now go to your project root and run ZAP like this: (replace localhost:8080 with your application homepage)
     ```bash
     java -jar $ZAP_PATH/zap-2.7.0.jar -cmd -installdir $ZAP_PATH -quickurl http://localhost:8080 -quickout $PWD/zap-report.xml
     ```
-4. So step 3 will generate an zap-report.xml file in the root of you project.  
+4. So step 3 will generate a zap-report.xml file in the root of you project.  
     To see if the zap report contains the same number of alerts that you expect, hopefully 0, run:
     ```bash
     DEVICE=mobile npx lets-run-zap
