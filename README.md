@@ -42,7 +42,7 @@ NOT_HEADLESS=true npx lets-run-wdio
 test/
 -- lighthouse/
 ```
-2. Inside test/lighthouse/ you need to create an urls.json a file, this will tell lighthouse what URLs to test.  
+2. Inside test/lighthouse/ you need to create an urls.json file, this will tell lighthouse what URLs to test.  
 Here is an example:
 ```json
 {
@@ -94,7 +94,7 @@ DEVICE can be "mobile", "tablet" or "desktop"
 test/
 -- zap/
 ```
-2. Inside test/zap/ you need to create an alerts.json a file, this will tell zap how many "high", "medium" and "low" alerts you expect to have on each device (mobile, tablet and desktop).  
+2. Inside test/zap/ you need to create an alerts.json file, this will tell zap how many "high", "medium" and "low" alerts you expect to have on each device (mobile, tablet and desktop).  
 Here is an example:
 ```json
 {
@@ -135,7 +135,7 @@ DEVICE can be "mobile", "tablet" or "desktop"
 test/
 -- ssr/
 ```
-2. Inside test/ssr/ you need to create an urls.json a file, this will tell our script what URLs to test.  
+2. Inside test/ssr/ you need to create an urls.json file, this will tell our script what URLs to test.  
 Here is an example:
 ```json
 {
